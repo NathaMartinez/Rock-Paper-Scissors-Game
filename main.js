@@ -25,8 +25,18 @@ var getComputerChoice = function (){
 function playRound(playerSelection, computerSelection) {
     if (playerSelection == computerSelection){
         console.log("Draw");
+    } else if (playerSelection != computerSelection){
+        if ((playerSelection == 'rock' && computerSelection == 'paper') ||
+            (playerSelection == 'paper' && computerSelection == 'scissors') ||
+            (playerSelection == 'scissors' && computerSelection == 'rock')){
+            console.log("Computer Wins.");
+        } else if ((playerSelection == 'rock' && computerSelection == 'scissors') ||
+                   (playerSelection == 'paper' && computerSelection == 'rock')  ||
+                   (playerSelection == 'scissors' && computerSelection == 'paper')){
+            console.log("Player Wins.");
+        }
     }
 }
     const playerSelection = userInput.toString().toLowerCase();
     const computerSelection = getComputerChoice();
-    console.log(playRound(playerSelection, computerSelection))
+    console.log(playRound(playerSelection, computerSelection));
