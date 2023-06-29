@@ -2,8 +2,8 @@
 var getComputerChoice = function (){
     const Array = ['Rock', 'Paper', 'Scissors'];
     let x = Math.floor(Math.random() * Array.length);
-    console.log(Array[x]);
-    return Array[x];
+    console.log("Computer Picked: ", Array[x]);
+    return Array[x].toString().toLowerCase();
     }
     getComputerChoice();
     
@@ -21,5 +21,12 @@ var getComputerChoice = function (){
        else {
         console.log("Error")
        }
-    
-    
+
+function playRound(playerSelection, computerSelection) {
+    if (playerSelection == computerSelection){
+        console.log("Draw");
+    }
+}
+    const playerSelection = userInput.toString().toLowerCase();
+    const computerSelection = getComputerChoice();
+    console.log(playRound(playerSelection, computerSelection))
