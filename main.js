@@ -22,7 +22,6 @@ function getPlayerChoice() {
        }
         return userInput.toString().toLowerCase();
     }
-
     let playerWin = false;
     let computerWin = false;
 function playRound() {
@@ -43,7 +42,7 @@ function playRound() {
         } else if ((playerSelection == 'rock' && computerSelection == 'scissors') ||
                    (playerSelection == 'paper' && computerSelection == 'rock')  ||
                    (playerSelection == 'scissors' && computerSelection == 'paper')){
-            console.log("Player Wins.\n", playerSelection[0].toUpperCase() + playerSelection.substring(1), 
+            console.log("You Win.\n", playerSelection[0].toUpperCase() + playerSelection.substring(1), 
             "beats", computerSelection,);
             computerWin = false;
             playerWin = true;
